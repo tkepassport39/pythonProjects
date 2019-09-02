@@ -1,11 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
+# get input from user
 url = input("Enter the URL: ")
 finalUrl = ""
 
-
+# check if user input www
 if "www." in url:
+    # replace www with http://
     finalUrl = url.replace("www.", "http://")
 else:
     finalUrl = "https://" + url
@@ -21,7 +23,17 @@ soup = BeautifulSoup(r.text, 'html.parser')
 
 formatted_link = []
 
-print(soup.title)
-
-for link in soup.find_all('a'):
-    print("URL 'a'  : " + link.get('href'))
+for link in soup.find_all('h2', class_='post-block__title'):
+    # get the name of the a attribute with whitespaces stripped
+    name = [text for text in link.stripped_strings]
+    print("TITLE : " + name[0])
+    print("URL : " + link.a['href'])
+    """
+    data = {
+        'title': name[0],
+        'URL': link.a['href']
+    }
+    print(data)
+    #formatted_link.append(data)
+    """
+#print(formatted_link)

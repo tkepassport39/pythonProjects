@@ -11,5 +11,5 @@ Once you have those installed. When you execute the code in the pycharm terminal
 
 ## Screenshot
 
-![screenshot](./images/scrappingHTML_py.png)
+![screenshot](./images/scrappingHTML_py2.png)
 

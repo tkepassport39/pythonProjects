@@ -1,3 +1,10 @@
+"""
+
+    This codes purpose is to give me the latest story
+    listing from techcrunch.com
+
+"""
+
 import requests
 from bs4 import BeautifulSoup
 

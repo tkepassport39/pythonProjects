@@ -1,7 +1,7 @@
 """
 
     This codes purpose is to give me the latest story
-    listing from techcrunch.com
+    listing from a specific website. Website not mentioned for reasons.
 
 """
 
